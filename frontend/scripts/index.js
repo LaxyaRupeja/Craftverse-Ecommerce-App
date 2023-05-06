@@ -14,3 +14,15 @@ var sweper = new Swiper(".mySweper", {
         disableOnInteraction: false,
     },
 });
+let nav = document.getElementById("nav")
+window.addEventListener("scroll", () => {
+    if (window.scrollY == 0) {
+        nav.style.top = "33px"
+        nav.classList.remove("shadow")
+    }
+    else {
+        nav.style.top = "0px"
+        nav.classList.add("shadow")
+        // dropdown.style.display = "none"
+    }
+})
