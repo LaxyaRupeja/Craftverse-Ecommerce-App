@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
   </head>
 
   <body>
@@ -43,6 +47,7 @@
                     Email
                   </p>
                   <input
+                    id="email"
                     placeholder="123@ex.com"
                     type="text"
                     class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
@@ -55,6 +60,7 @@
                     Password
                   </p>
                   <input
+                    id="password"
                     placeholder="Password"
                     type="password"
                     class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
@@ -62,7 +68,8 @@
                 </div>
                 <div class="relative">
                   <a
-                    class="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-[#FD0054] rounded-lg transition duration-200 hover:bg-[#ba023f] ease"
+                    id="login"
+                    class="w-full cursor-pointer inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-[#FD0054] rounded-lg transition duration-200 hover:bg-[#ba023f] ease"
                     >Submit</a
                   >
                 </div>
@@ -265,4 +272,6 @@
       </div>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./scripts/login.js"></script>
 </html>
