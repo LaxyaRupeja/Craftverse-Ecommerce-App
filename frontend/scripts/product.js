@@ -1,6 +1,7 @@
 let filter = document.getElementById("filter")
 let token = localStorage.getItem("token")
 let card = document.getElementById("smooth")
+let url = "https://long-eel-tunic.cyclic.app/getProd"
 filter.addEventListener("click", () => {
   if (card.style.opacity == "0" && card.style.display == "none") {
     card.style.opacity = "1"
@@ -34,10 +35,20 @@ function createCard(id, title, desc, price, img) {
       >Rs.${price}</p>
     </div>
   </div>`
+
+  cardL.addEventListener("click", () => {
+    localStorage.setItem("ProductID", id)
+    window.location.href = "individual.html";
+  })
+  return cardL;
+}
+function fetchData(url) {
+  fetch(url, {
   return cardL;
 }
 function fetchData() {
   fetch("https://long-eel-tunic.cyclic.app/getProd", {
+
     method: "GET",
     headers: {
       "Authorization": token
@@ -45,6 +56,45 @@ function fetchData() {
   })
     .then((res) => res.json())
     .then((data) => {
+      if (data.msg) {
+        wrap.innerHTML = ` <a href="login.html" class="text-blue-600"><p class="text-3xl text-red-700 font-semibold line-clamp-1">Please login First</p></a>`
+      }
+      else {
+        console.log(data)
+        wrap.innerHTML = null;
+        data.forEach(el => {
+          wrap.append(createCard(el._id, el.title, el.desc, el.price, el.image))
+        })
+        document.getElementById("prodF").innerText = data.length
+      }
+    })
+}
+fetchData(url);
+document.getElementById("low").addEventListener("click", () => {
+  fetchData(`${url}?sort=low`)
+})
+document.getElementById("high").addEventListener("click", () => {
+  fetchData(`${url}?sort=high`)
+})
+document.getElementById("saree").addEventListener("change", () => {
+  fetchData(`https://long-eel-tunic.cyclic.app/prodcat/Saree`);
+})
+document.getElementById("kurta").addEventListener("change", () => {
+  fetchData(`https://long-eel-tunic.cyclic.app/prodcat/Kurta`)
+})
+document.getElementById("home").addEventListener("change", () => {
+  fetchData(`https://long-eel-tunic.cyclic.app/prodcat/Home-Decor`)
+})
+document.getElementById("two").addEventListener("change", () => {
+  fetchData(`https://long-eel-tunic.cyclic.app/prodfilter/2000`)
+})
+document.getElementById("five").addEventListener("change", () => {
+  fetchData(`https://long-eel-tunic.cyclic.app/prodfilter/500`)
+})
+document.getElementById("thou").addEventListener("change", () => {
+  fetchData(`https://long-eel-tunic.cyclic.app/prodfilter/1000`)
+})
+
       console.log(data)
       data.forEach(el => {
         wrap.append(createCard(el._id, el.title, el.desc, el.price, el.image))

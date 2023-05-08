@@ -59,6 +59,7 @@
       </div>
       <div class="lg:flex gap-4 md:hidden sm:hidden">
         <div
+          id="loginButton"
           @click.away="open = false"
           class="relative"
           x-data="{ open: false }"
@@ -137,38 +138,46 @@
       <p
         class="text-xl text-white border-r-2 border-white px-5 hover:bg-[#660123]"
       >
-        Stores Near me
+        <a href="product.html">Stores Near me</a>
       </p>
       <p
         class="text-xl text-white border-r-2 border-white px-5 hover:bg-[#660123]"
       >
-        Product Near me
+        <a href="product.html">Product Near me</a>
       </p>
       <p
         class="text-xl text-white border-r-2 border-white px-5 hover:bg-[#660123]"
       >
-        Fashion
+        <a href="product.html">Fashion</a>
       </p>
       <p
         class="text-xl text-white border-r-2 border-white px-5 hover:bg-[#660123]"
       >
-        Beauty & Personal Care
+        <a href="product.html">Beauty & Personal Care</a>
       </p>
       <p
         class="text-xl text-white border-r-2 border-white px-5 hover:bg-[#660123]"
       >
-        Home Decor
+        <a href="product.html">Home Decor</a>
       </p>
-      <p class="text-xl text-white px-4 hover:bg-[#660123]">Electronics</p>
+      <p class="text-xl text-white px-4 hover:bg-[#660123]">
+        <a href="product.html">Electronics</a>
+      </p>
     </div>
     <main class="mt-[50px] w-[91%] m-auto font-Rubik">
       <div
         class="flex justify-between border-y-2 border-gray-500 text-gray-600 items-center p-2"
       >
-        <p class="text-3xl">50 Products Found Near Mumbai</p>
+        <p class="text-3xl">
+          <span id="prodF">0</span> Products Found Near Mumbai
+        </p>
         <div class="flex gap-5 font text-xl">
-          <p class="hover:bg-[#e5e7eb] p-3 rounded-md">Cost: High To Low</p>
-          <p class="hover:bg-[#e5e7eb] p-3 rounded-md">Cost: Low To High</p>
+          <p id="high" class="hover:bg-[#e5e7eb] p-3 rounded-md cursor-pointer">
+            Cost: High To Low
+          </p>
+          <p id="low" class="hover:bg-[#e5e7eb] p-3 rounded-md cursor-pointer">
+            Cost: Low To High
+          </p>
           <p class="hover:bg-[#e5e7eb] p-3 rounded-md">Rating</p>
           <p
             id="filter"
@@ -184,40 +193,58 @@
           <div class="text-xl flex flex-col gap-3">
             <p class="text-3xl">Price</p>
             <div class="flex gap-3">
-              <input class="w-4" type="checkbox" name="" id="" />
+              <input class="w-4" type="radio" name="price" id="five" />
               <p>Rs.500-1000</p>
             </div>
             <div class="flex gap-3">
-              <input type="checkbox" class="w-4" name="" id="" />
+              <input type="radio" class="w-4" name="price" id="thou" />
               <p>Rs.1000-2000</p>
             </div>
             <div class="flex gap-3">
-              <input type="checkbox" class="w-4" name="" id="" />
+              <input type="radio" class="w-4" name="pirce" id="two" />
               <p>Above Rs.2000</p>
             </div>
           </div>
           <div class="text-xl flex flex-col gap-3">
             <p class="text-3xl">Category</p>
             <div class="flex gap-3">
-              <input type="checkbox" class="w-4" name="" id="" />
-              <p>Beauty</p>
-            </div>
-            <div class="flex gap-3">
-              <input type="checkbox" class="w-4" name="" id="" />
+              <input type="radio" class="w-4" name="cat" id="saree" />
               <p>Sarees</p>
             </div>
             <div class="flex gap-3">
-              <input type="checkbox" class="w-4" name="" id="" />
+              <input type="radio" class="w-4" name="cat" id="kurta" />
               <p>Kurtas</p>
             </div>
             <div class="flex gap-3">
-              <input type="checkbox" class="w-4" name="" id="" />
-              <p>Home Decor</p>
+              <input type="radio" class="w-4" name="cat" id="home" />
+              <p>Home-Decor</p>
             </div>
           </div>
         </div>
       </div>
-      <div id="wrapper" class="grid grid-cols-4 auto-rows-fr gap-7 mt-5">
+      <div id="wrapper" class="grid grid-cols-4 aut o-rows-fr gap-7 mt-5">
+        <div>
+          <img
+            class="aspect-square object-contain w-full"
+            src="${img}"
+            alt=""
+          />
+          <div class="px-3 pt-2 z-30 flex flex-col pb-4">
+            <p class="text-xl font-semibold line-clamp-1">${title}</p>
+            <p class="text-gray-500">${desc}</p>
+            <div class="flex justify-between mt-2">
+              <p class="text-xl p-3 pl-0 flex gap-1 items-center">
+                <i class="fa-solid fa-star text-yellow-400 mb-1"></i
+                >${randomNum}/5
+              </p>
+              <p
+                class="text-[16px] p-2 border-2 text-[#A80038] flex justify-center items-center text-center rounded-md hover:bg-[#A80038] hover:text-white transition-all duration-[250ms] ease-out font-semibold border-[#A80038]"
+              >
+                Rs.${price}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="bg-[#a80038] text-white mt-5">

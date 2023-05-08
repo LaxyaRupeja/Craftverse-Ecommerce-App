@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SignUp</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
     <title>Login</title>
     <link rel="stylesheet" href="./output.css" />
   </head>
-
   <body>
     <div class="bg-white relative lg:py-20">
       <div
@@ -21,6 +24,7 @@
               id="addImage"
               class="flex flex-col items-center w-full h-full relative lg:pr-10"
             >
+              <img src="./images/reddistcraf.png" class="btn-" />
               <img src="/images/reddistcraf.png" class="btn-" />
             </div>
           </div>
@@ -43,6 +47,7 @@
                     Username
                   </p>
                   <input
+                    id="username"
                     placeholder="John"
                     type="text"
                     class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
@@ -55,6 +60,7 @@
                     Email
                   </p>
                   <input
+                    id="email"
                     placeholder="123@ex.com"
                     type="text"
                     class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
@@ -67,6 +73,7 @@
                     Password
                   </p>
                   <input
+                    id="password"
                     placeholder="Password"
                     type="password"
                     class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
@@ -86,6 +93,7 @@
                 </div>
                 <div class="relative">
                   <a
+                    id="register"
                     class="w-full inline-block pt-4 pr-5 pb-4 pl-5 text-xl font-medium text-center text-white bg-[#FD0054] rounded-lg transition duration-200 hover:bg-[#ba023f] ease"
                     >Submit</a
                   >
@@ -286,4 +294,6 @@
       </div>
     </div>
   </body>
+  <script src="./scripts/register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

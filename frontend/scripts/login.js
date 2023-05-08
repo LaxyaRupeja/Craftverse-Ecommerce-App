@@ -19,10 +19,11 @@ function postdata() {
             }
             else {
                 localStorage.setItem("token", data.token)
+                localStorage.setItem("name", data.username)
                 console.log(data)
                 // alert("Logged in Successfully");
                 Swal.fire('Registerd!', '', 'success')
-                // window.location.href = 'index.html'
+                window.location.href = 'index.html'
 
             }
             // alert("succesfully logged in");
