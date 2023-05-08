@@ -35,6 +35,7 @@ function createCard(id, title, desc, price, img) {
       >Rs.${price}</p>
     </div>
   </div>`
+
   cardL.addEventListener("click", () => {
     localStorage.setItem("ProductID", id)
     window.location.href = "individual.html";
@@ -43,6 +44,11 @@ function createCard(id, title, desc, price, img) {
 }
 function fetchData(url) {
   fetch(url, {
+  return cardL;
+}
+function fetchData() {
+  fetch("https://long-eel-tunic.cyclic.app/getProd", {
+
     method: "GET",
     headers: {
       "Authorization": token
@@ -88,3 +94,11 @@ document.getElementById("five").addEventListener("change", () => {
 document.getElementById("thou").addEventListener("change", () => {
   fetchData(`https://long-eel-tunic.cyclic.app/prodfilter/1000`)
 })
+
+      console.log(data)
+      data.forEach(el => {
+        wrap.append(createCard(el._id, el.title, el.desc, el.price, el.image))
+      })
+    })
+}
+fetchData();
