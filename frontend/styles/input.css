@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap'); */
 .swiper {
     width: 100%;
     height: 100%;
@@ -42,4 +43,17 @@
   #details{
     padding: 30px;
     border: 1px solid lightgray;
+  }
+  #smooth{
+     transition: 0.2s;
+     background-color: white;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     border-radius: 10px;
+     opacity: 0;
+  }
+  #wrapper > div{
+    transition: 0.3s;
+  }
+  #wrapper > div:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }

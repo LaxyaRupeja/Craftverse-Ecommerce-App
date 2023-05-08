@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
-        'Noto': ['Noto Sans', 'sans-serif']
+        'Rubik': ['Rubik']
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require("tw-elements/dist/plugin.cjs")
+  ],
 }

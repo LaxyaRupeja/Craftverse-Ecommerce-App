@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="flex font-Rubik w-[80%] m-auto">
+      <div class="w-[40%] mt-4 flex flex-col">
+        <h1 class="text-4xl mb-6">Saved Address:</h1>
+        <div id="addressWrap" class="flex flex-col gap-3">
+          <div class="rounded-lg border-2 flex flex-col gap-2 p-5 text-[16px]">
+            Loading...
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto py-8 font-Rubik">
+        <form class="w-full max-w-sm mx-auto bg-white p-8 rounded-md shadow-md">
+          <div class="mb-4 flex gap-3">
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="name"
+                >First-Name</label
+              >
+              <input
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                type="text"
+                id="fname"
+                name="name"
+                placeholder="Laksh"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="name"
+                >Last-Name</label
+              >
+              <input
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                type="text"
+                id="lname"
+                name="name"
+                placeholder="Rupeja"
+              />
+            </div>
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Email</label
+            >
+            <input
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Address Line 1</label
+            >
+            <input
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+              type="text"
+              id="add1"
+              name="email"
+              placeholder="Hno.-24"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Address Line 2 (Optional)</label
+            >
+            <input
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+              type="text"
+              id="add2"
+              name="email"
+              placeholder="Block-2"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >City</label
+            >
+            <input
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+              type="text"
+              id="city"
+              name="email"
+              placeholder="Kota"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+              >Pincode</label
+            >
+            <input
+              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+              type="text"
+              id="pin"
+              name="email"
+              placeholder="324009"
+            />
+          </div>
+          <button
+            id="clickToAdd"
+            class="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="./scripts/address.js"></script>
+</html>
