@@ -1,35 +1,35 @@
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+  slidesPerView: 4,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 var sweper = new Swiper(".mySweper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 let nav = document.getElementById("nav")
 window.addEventListener("scroll", () => {
-    if (window.scrollY == 0) {
-        nav.style.top = "33px"
-        nav.classList.remove("shadow")
-    }
-    else {
-        nav.style.top = "0px"
-        nav.classList.add("shadow")
-        // dropdown.style.display = "none"
-    }
+  if (window.scrollY == 0) {
+    nav.style.top = "33px"
+    nav.classList.remove("shadow")
+  }
+  else {
+    nav.style.top = "0px"
+    nav.classList.add("shadow")
+    // dropdown.style.display = "none"
+  }
 })
 let userName = localStorage.getItem("name")
 window.addEventListener("load", () => {
-    if (userName) {
-        document.getElementById("loginButton").innerHTML = `<button
+  if (userName) {
+    document.getElementById("loginButton").innerHTML = `<button
         @click="open = !open"
         class="flex flex-row items-center w-full px-4 py-2 mt-2 text-[17px] font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
       >
@@ -67,7 +67,7 @@ window.addEventListener("load", () => {
           >
           <a
             class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="#"
+            href="orderhist.html"
             >Order History</a
           >
           <a
@@ -79,13 +79,13 @@ window.addEventListener("load", () => {
         </div>
       </div>`
 
-    }
-    else {
-        document.getElementById("loginButton").innerHTML = `<a class="font-semibold text-xl" href="login.html">Login</a>`
-    }
+  }
+  else {
+    document.getElementById("loginButton").innerHTML = `<a class="font-semibold text-xl" href="login.html">Login</a>`
+  }
 })
 function logout() {
-    localStorage.removeItem("name");
-    location.reload()
+  localStorage.removeItem("name");
+  location.reload()
 
 }
