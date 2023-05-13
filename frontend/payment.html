@@ -103,31 +103,8 @@
           <div class="-mx-3 md:flex items-start">
             <div class="px-3 md:w-7/12 lg:pr-10">
               <div
-                class="w-full mx-auto text-gray-800 font-light mb-6 border-b border-gray-200 pb-6"
-              >
-                <div class="w-full flex items-center">
-                  <div
-                    class="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-                      alt=""
-                    />
-                  </div>
-                  <div class="flex-grow pl-3">
-                    <h6 class="font-semibold uppercase text-gray-600">
-                      Ray Ban Sunglasses.
-                    </h6>
-                    <p class="text-gray-400">x 1</p>
-                  </div>
-                  <div>
-                    <span class="font-semibold text-gray-600 text-xl">$210</span
-                    ><span class="font-semibold text-gray-600 text-sm"
-                      >.00</span
-                    >
-                  </div>
-                </div>
-              </div>
+                class="w-full mx-auto text-gray-800 font-light mb-4 border-b border-gray-200 pb-6"
+              ></div>
               <div class="mb-6 pb-6 border-b border-gray-200">
                 <div class="-mx-2 flex items-end justify-end">
                   <div class="flex-grow px-2 lg:max-w-xs">
@@ -157,7 +134,7 @@
                     <span class="text-gray-600">Subtotal</span>
                   </div>
                   <div class="pl-3">
-                    <span class="font-semibold">$190.91</span>
+                    <span class="font-semibold" id="totalP">$190.91</span>
                   </div>
                 </div>
                 <div class="w-full flex items-center">
@@ -178,34 +155,12 @@
                   </div>
                   <div class="pl-3">
                     <span class="font-semibold text-gray-400 text-sm">Rs.</span>
-                    <span class="font-semibold">$210.00</span>
+                    <span class="font-semibold" id="totalD">$210.00</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="px-3 md:w-5/12">
-              <div
-                class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-3 text-gray-800 font-light mb-6"
-              >
-                <div class="w-full flex mb-3 items-center">
-                  <div class="w-32">
-                    <span class="text-gray-600 font-semibold">Contact</span>
-                  </div>
-                  <div class="flex-grow pl-3">
-                    <span>Scott Windon</span>
-                  </div>
-                </div>
-                <div class="w-full flex items-center">
-                  <div class="w-32">
-                    <span class="text-gray-600 font-semibold"
-                      >Billing Address</span
-                    >
-                  </div>
-                  <div class="flex-grow pl-3">
-                    <span>123 George Street, Sydney, NSW 2000 Australia</span>
-                  </div>
-                </div>
-              </div>
               <div
                 class="w-full mx-auto rounded-lg bg-white border border-gray-200 text-gray-800 font-light mb-6"
               >
@@ -327,9 +282,10 @@
               </div>
               <div>
                 <button
+                  id="goToHome"
                   class="block w-full max-w-xs mx-auto bg-[#FD0054] hover:bg-[#ca0043] focus:bg-[#ca0043] text-white rounded-lg px-3 py-2 font-semibold"
                 >
-                  <i class="mdi mdi-lock-outline mr-1"></i> PAY NOW
+                  <i class="mdi mdi-lock-outline mr-1"></i>PAY NOW
                 </button>
               </div>
             </div>
@@ -338,4 +294,6 @@
       </div>
     </div>
   </body>
+  <script src="./scripts/payment.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

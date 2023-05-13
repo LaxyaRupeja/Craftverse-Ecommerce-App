@@ -22,7 +22,7 @@ function postdata() {
                 localStorage.setItem("name", data.username)
                 console.log(data)
                 // alert("Logged in Successfully");
-                Swal.fire('Registerd!', '', 'success')
+                Swal.fire('Logged In!', '', 'success')
                 window.location.href = 'index.html'
 
             }

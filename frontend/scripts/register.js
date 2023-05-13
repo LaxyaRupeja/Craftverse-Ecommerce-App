@@ -4,8 +4,8 @@ function postdata() {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value
     }
-    if (obj.username != undefined && obj.email != undefined && obj.password != undefined) {
-        fetch("https://elegant-bass-outerwear.cyclic.app/task/register", {
+    if (obj.name != undefined && obj.email != undefined && obj.password != undefined) {
+        fetch("https://long-eel-tunic.cyclic.app/register", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -19,7 +19,7 @@ function postdata() {
             })
     }
     else {
-
+        console.log("something")
     }
 }
 document.getElementById("register").addEventListener("click", () => {

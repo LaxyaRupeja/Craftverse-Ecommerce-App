@@ -79,6 +79,7 @@ function fetchData() {
       document.getElementById("totalD").innerText = updatePrice(data.order)
       document.getElementById("totalP").innerText = updatePrice(data.order)
       removeItem()
+      UpdateCartValue()
 
     })
 }
@@ -142,3 +143,17 @@ function removeItem() {
     })
   }
 }
+
+function UpdateCartValue() {
+  fetch("https://long-eel-tunic.cyclic.app/getUserOrder", {
+    method: "GET",
+    headers: {
+      Authorization: token,
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      document.getElementById("cartIconNo").innerText = data.order.length;
+    })
+}
+UpdateCartValue()
