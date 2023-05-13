@@ -1,8 +1,27 @@
-#Craftverse
-Craftverse is a platform for craft enthusiasts to share and discover new crafting ideas. Users can browse through different categories of crafts, view project details, add projects to their cart, and purchase them using the built-in checkout system. Craftverse is built using HTML, Tailwind CSS, JavaScript, MongoDB, Node.js, Express, and Mongoose.
-
-#Features
-Browse crafts: users can browse through different categories of crafts and view project details
-Add to cart: users can add projects to their cart and purchase them using the built-in checkout system
-Authorization: users must be logged in to access certain features, such as adding to cart and purchasing
-Individual project: each project has its own page with detailed information and images
+# [Craftverse](https://poetic-salmiakki-461e65.netlify.app/) (Craftvilla.com Clone)
+## Project Description
+**Craftverse is a clone of craftvilla.com which is an ecommerce website with wide variety of product like home-decor and some fashion product also with seemless user experience**
+## Individual Project built within the span of 5 Days
+## Tech Stack
+* HTML
+* TailwindCSS
+* Javascript
+* SweetAlert
+* Swiper.js
+* Font-Awesome
+* Mongodb
+* Mongoose
+* NodeJS
+* expressJS
+## Features
+* Login/SignUp
+* Add Product To Cart
+* Individual Product Page
+* Order History
+* User-friendly interface
+* Filters by Price and Category
+* Payment Page
+* Authorization
+* Encryption
+## Deployed Link
+https://poetic-salmiakki-461e65.netlify.app
