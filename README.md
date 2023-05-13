@@ -23,5 +23,8 @@
 * Payment Page
 * Authorization
 * Encryption
-## Deployed Link
+## Frontend and Backend Deployed Link
+###Frontend
 https://poetic-salmiakki-461e65.netlify.app
+###Backend
+https://long-eel-tunic.cyclic.app/
